@@ -23,7 +23,7 @@ $(document).ready(function() {
 			}
 			return array.slice(holderArray.length, array.length-1).concat(holderArray.join("") + "ay").join("");
 		};
-		function specThree(array) {
+		function specsThreeAndFour(array) {
 			if ((["q"].includes(array[0])) && (["u"].includes(array[1]))) {
 				return array.concat(array[0] + array[1] + "ay").join("");
 			}
@@ -32,7 +32,7 @@ $(document).ready(function() {
 		
 		$("#output").text(specOne(sentenceArray));
 		$("#output").text(specTwo(sentenceArray));
-		$("#output").text(specThree(sentenceArray));
+		$("#output").text(specsThreeAndFour(sentenceArray));
 
 	})
 });
