@@ -12,7 +12,7 @@ $(document).ready(function() {
 				return array.concat("way").join("");
 			}
 		};
-		function specTwo(array) {
+		function specsTwoAndFour(array) {
 			var holderArray = [];
 			for (i=0; i <= array.length-1; i++) {
 				if (!["a", "i", "u", "e", "o"].includes(array[i])) {
@@ -23,7 +23,7 @@ $(document).ready(function() {
 			}
 			return array.slice(holderArray.length, array.length-1).concat(holderArray.join("") + "ay").join("");
 		};
-		function specsThreeAndFour(array) {
+		function specThree(array) {
 			if ((["q"].includes(array[0])) && (["u"].includes(array[1]))) {
 				return array.concat(array[0] + array[1] + "ay").join("");
 			}
@@ -31,8 +31,8 @@ $(document).ready(function() {
 		
 		
 		$("#output").text(specOne(sentenceArray));
-		$("#output").text(specTwo(sentenceArray));
-		$("#output").text(specsThreeAndFour(sentenceArray));
+		$("#output").text(specsTwoAndFour(sentenceArray));
+		$("#output").text(specThree(sentenceArray));
 
 	})
 });
